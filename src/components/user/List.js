@@ -1,8 +1,6 @@
 import { Typography, Box, makeStyles, TableContainer, Table, TableBody, TableCell, TableHead, TableRow, Paper, IconButton, Tooltip } from "@material-ui/core"
 import { orange } from '@material-ui/core/colors';
-
 import DeleteIcon from '@material-ui/icons/Delete';
-
 import axios from "axios";
 import { useState, useEffect } from "react";
 const useStyles = makeStyles({
@@ -25,7 +23,7 @@ function List () {
   async function getAllUser() {
    try {
     const User = await axios.get(" http://localhost:3333/users")
-    // console.log(students.data);
+  
     setUsers(User.data);
    } catch (error) {
     console.log("Something is Wrong");
